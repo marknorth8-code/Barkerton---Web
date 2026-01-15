@@ -1,38 +1,68 @@
 
-:root{
-  --blue:#09126a;
-  --header-h:90px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Bricolage Grotesque',sans-serif;color:#000}
-header{
-  position:fixed;top:0;left:0;right:0;
-  height:var(--header-h);
-  background:#fff;
-  display:flex;align-items:center;z-index:1000;
+
+body {
+  margin: 0;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  overflow-x: hidden;
+  padding-top: 90px;
 }
-.logo{width:40%;height:100%}
-.logo img{height:100%;width:auto}
-nav{margin-left:auto;padding-right:40px}
-nav a{margin-left:30px;font-size:30px;color:#000;text-decoration:none}
-main{padding-top:var(--header-h)}
-.section{padding:60px}
-.hero{
-  height:80vh;
-  background:url('../images/home-hero.jpg') center/cover no-repeat;
-  position:relative;
+
+img {
+  max-width: 100%;
+  height: 100%;
+  display: block;
 }
-.hero h1{
-  position:absolute;top:40px;right:40px;
-  font-family:'Inknut Antiqua',serif;
-  font-size:40px;color:#fff;
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  z-index: 1000;
 }
-.blue{background:var(--blue);color:#fff}
-.scroll-row{display:flex;gap:20px;overflow-x:auto}
-.scroll-row::-webkit-scrollbar{display:none}
-.scroll-row div{min-width:300px;border:1px solid #000}
-footer{
-  background:var(--blue);color:#fff;
-  padding:40px;font-size:24px;
-  display:flex;justify-content:space-between
+
+.logo {
+  width: 40%;
+  height: 100%;
+}
+
+.logo img {
+  object-fit: contain;
+  object-position: left;
+}
+
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #000;
+  font-size: 26px;
+}
+
+.section-blue {
+  background: #09126a;
+  color: #fff;
+}
+
+.footer {
+  background: #09126a;
+  color: #fff;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer small {
+  font-family: "Times New Roman", serif;
+  font-size: 14px;
 }
